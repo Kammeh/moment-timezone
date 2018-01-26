@@ -24,6 +24,11 @@
 	// 	return moment;
 	// }
 
+	// Resolves es6 module loading issue
+ 	if (moment.version === undefined) {
+ 		moment = moment.default;
+ 	}
+
 	var VERSION = "0.5.14",
 		zones = {},
 		links = {},
